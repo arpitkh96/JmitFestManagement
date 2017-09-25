@@ -1,0 +1,107 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context=".activities.SignUpActivity">
+
+    <com.jmit.festmanagement.utils.ForegroundImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="#cc000000"
+        android:scaleType="centerCrop"
+        android:src="@drawable/jmit" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="0dp">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:title="Login" />
+
+        </android.support.design.widget.AppBarLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_roll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="40dp"
+            app:theme="@style/TextLabel">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:layout_above="@+id/stuLogin"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:ems="10"
+                android:hint="@string/hint_roll"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColorHint="#ffff0000" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="40dp"
+            app:theme="@style/TextLabel">
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_above="@+id/stuLogin"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:singleLine="true"
+            android:textColorHint="#ffff0000" />
+</android.support.design.widget.TextInputLayout>
+        <Button
+            android:id="@+id/stuLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/capsule"
+            android:foreground="@drawable/ripple_normal"
+            android:text="@string/btn_continue"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

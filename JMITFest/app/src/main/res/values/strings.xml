@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">JMIT</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="network_error">No Network Connection Available.Please Check Your Internet Connection.</string>
+
+    <string name="hint_roll">Roll No</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_log_in">Log In</string>
+    <string name="btn_continue">Continue</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="spinner_title_fest">Select Fest</string>
+    <string name="spinner_title_event">Select Event</string>
+    <string name="submit">Submit</string>
+</resources>

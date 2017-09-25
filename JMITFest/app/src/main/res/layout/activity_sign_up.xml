@@ -1,0 +1,189 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context=".activities.SignUpActivity">
+
+    <com.jmit.festmanagement.utils.ForegroundImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="#cc000000"
+        android:scaleType="centerCrop"
+        android:src="@drawable/jmit" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:id="@+id/main_frame"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/AppBar"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="0dp">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:title="Sign up" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/fRollLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:theme="@style/TextLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/roll"
+                    android:textColor="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:hint="Roll Number"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/fNameLayout"
+                app:theme="@style/TextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fRollLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/fName"
+                    android:layout_width="match_parent"
+                    android:textColor="@android:color/white"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:hint="Name" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/department"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/fNameLayout"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:ems="20"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/phonelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/department"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                app:theme="@style/TextLabel">
+
+                <EditText
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:textColor="@android:color/white"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:hint="Phone Number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/Emaillayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phonelayout"
+                android:layout_centerHorizontal="true"
+                app:theme="@style/TextLabel"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:textColor="@android:color/white"
+                    android:id="@+id/Email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:hint="Email ID"
+                    android:inputType="textEmailAddress" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/Cemaillayout"
+                app:theme="@style/TextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Emaillayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/cemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:textColor="@android:color/white"
+                    android:hint="Confirm Email ID"
+                    android:inputType="textEmailAddress" />
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                app:theme="@style/TextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Cemaillayout"
+                android:id="@+id/cpass"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:textColor="@android:color/white"
+                    android:hint="Password"
+                    android:inputType="textPassword" />
+
+            </android.support.design.widget.TextInputLayout>
+            <Button
+                android:id="@+id/btn_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/capsule"
+                android:textColor="#fff"
+                android:layout_alignLeft="@id/Cemaillayout"
+                android:layout_alignRight="@id/Cemaillayout"
+                android:layout_below="@id/cpass"
+                android:layout_marginTop="40dp"
+                android:text="Submit" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

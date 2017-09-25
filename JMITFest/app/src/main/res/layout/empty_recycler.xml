@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<android.support.v4.widget.ContentLoadingProgressBar
+    android:id="@+id/event_progressBar"
+    style="@style/Base.Widget.AppCompat.ProgressBar"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_gravity="center"
+    android:indeterminate="true"
+    android:indeterminateBehavior="repeat"
+    android:indeterminateTint="@color/colorAccent"
+    android:indeterminateTintMode="src_in" />
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:id="@+id/event_nodata"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/empty_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:tint="#666"
+            android:id="@+id/empty_image1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/empty_drawable" />
+
+        <TextView
+            android:id="@+id/nodata_textview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/empty_image1"
+            android:layout_centerHorizontal="true"
+            android:text="No data available"
+            android:textSize="25sp" />
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nodata_textview1"
+            android:layout_centerHorizontal="true"
+            android:background="#66bb6a"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColor="@android:color/white"
+            android:foreground="@drawable/ripple_normal"
+            android:text="Refresh" />
+    </RelativeLayout>
+</FrameLayout>
+</FrameLayout>
